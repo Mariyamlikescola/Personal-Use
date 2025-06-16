@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  font-family: 'Schoolbell', cursive;
+  background-color: #f3e3e3;
+  color: #3a3a3a;
+  overflow-x: hidden;
+}
+
+.scrapbook-bg {
+  background: url('https://i.pinimg.com/736x/f1/a0/f9/f1a0f968214b2d8276df896bb9a61698.jpg') repeat;
+  padding-bottom: 3rem;
+}
+
+header {
+  text-align: center;
+  background: rgba(228, 226, 209, 0.8);
+  padding: 2rem;
+  border-bottom: 3px dotted #c7a66b;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+section {
+  margin: 2rem auto;
+  max-width: 1000px;
+  background: rgba(228, 226, 209, 0.8);
+  padding: 1.5rem;
+  border: 2px dashed #d8b690;
+  border-radius: 15px;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.photo-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.polaroid {
+  background: url(https://i.pinimg.com/736x/5c/c0/09/5cc009fa5198bd9c5a3c2876def6ecac.jpg);
+  border: 1px solid #ccc;
+  width: 200px;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  transform: rotate(-1deg);
+  font-size: 0.95rem;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.reason {
+  composes: polaroid;
+}
+
+.letter-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.letter {
+  background: url(https://i.pinimg.com/736x/e2/2d/34/e22d34139fafc1e6f37a32c8a66ffe16.jpg);
+  border: 1px solid #f0c36d;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-size: 1.1rem;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+}
+
+.letter:hover {
+  transform: rotate(1deg) scale(1.05);
+}
+
+#letterMessage {
+  background: #fff7e6;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #c9a874;
+}
+
+.slideshow {
+  position: relative;
+  text-align: center;
+}
+
+.slide {
+  max-width: 350px;
+  width: 90%;
+  border-radius: 10px;
+  display: none;
+  margin: auto;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slideshow-controls {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #c7a66b;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Schoolbell', cursive;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+button:hover {
+  background-color: #a7824e;
+}
+
+.playlist-polaroid {
+  position: relative;
+  border: 2px solid #2f188f;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(228, 226, 209, 0.8);
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 2px 2px 15px rgba(26, 12, 160, 0.1);
+}
+
+.tape {
+  width: 60px;
+  position: absolute;
+  z-index: 10;
+}
+
+.top-left {
+  top: -15px;
+  left: -15px;
+}
+
+.bottom-right {
+  bottom: -15px;
+  right: -15px;
+}
+ /* Personality Color Palette Section */
+#colorPalette {
+  margin: 4rem 2rem;
+  padding: 2rem;
+  background: rgba(228, 226, 209, 0.8);
+  border: 4px dashed #e0cfc2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Schoolbell', cursive;
+  position: relative;
+}
+
+.palette-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.color-swatch {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.description-box {
+  text-align: center;
+  font-size: 1.2rem;
+  background: #fff8e1;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 2px solid #f1e3cd;
+  max-width: 600px;
+  margin: auto;
+  min-height: 80px;
+  transition: all 0.4s ease;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.reason-media {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  background: rgba(228, 226, 209, 0.8);
+  padding: 2rem;
+  font-size: 1rem;
+  border-top: 2px dashed #62491d;
+}
