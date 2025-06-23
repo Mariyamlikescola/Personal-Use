@@ -218,6 +218,122 @@ button:hover {
   object-fit: cover;
 }
 
+.polaroid p {
+  color: rgb(0, 0, 0);
+  background: url(https://i.pinimg.com/736x/e2/2d/34/e22d34139fafc1e6f37a32c8a66ffe16.jpg);
+  padding: 0.3rem;
+  border-radius: 6px;
+}
+
+/* Memory Match Game Styles */
+#memoryGame {
+  background: rgba(255, 250, 240, 0.8);
+  border: 3px dashed #d2a77c;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #d8b690;
+  border-radius: 10px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.card-front {
+  background: url('https://i.pinimg.com/564x/90/3d/1f/903d1fdcdf0d7e1a776d05b255f6f2d7.jpg');
+  background-size: cover;
+  color: transparent;
+}
+
+.card-back {
+  background: #fff7e0;
+  transform: rotateY(180deg);
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.card-back img {
+  width: 90%;
+  height: 90%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#winMessage {
+  margin-top: 2rem;
+  background: #fdf4dc;
+  border: 2px solid #c7a66b;
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-family: 'Schoolbell', cursive;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-section {
+  display: none;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff3e1;
+  border: 2px solid #deb887;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 600px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
 footer {
   text-align: center;
   background: rgba(228, 226, 209, 0.8);
